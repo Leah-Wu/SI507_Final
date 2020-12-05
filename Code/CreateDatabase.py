@@ -1,7 +1,6 @@
 import sqlite3
 import ScrapeData
 
-
 conn = sqlite3.connect("NFL.sqlite")
 cur = conn.cursor()
 def create_database():
@@ -196,6 +195,7 @@ def insert_rosters():
     conn.commit()
 
 def fillup_database():
+    ScrapeData.scrape_all()
     create_database()
     insert_team()
     match_team_id()

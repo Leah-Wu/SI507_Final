@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="utf8"/>
+        <title>NFL Home</title>
+    </head>
+    <body>
+        <h1>A team's performance history</h1>
+        {% if flag == False %}
+  
+        <form action="/handle_func4" method="POST">
+            <p>Which team's performance you want to check?</p>
+                <select name="team">
+                    {% for d in team_list %}
+                        <option value="{{d}}">{{d}}</option>
+                    {% endfor %}            
+                </select>
+            <p>Start-End year([2005,2020]) e.g. 2005-2010:<input name="year" type="text"/><br/></p>
+            <!-- <p>Which mode do you want to display?<input name="mode" type="text"/><br/></p> -->
+            <input type="submit" value="submit Form"/>
+        </form>
+        <p><a href="/">GO BACK</a></p>
+        {% else %}
+        <p>Results: </p>
+                <img src="{{url_for('static', filename=graph)}}" alt="bar plot of team's rosters' performance">
+        <p><a href="/func4">GO BACK</a></p>
+        {% endif %}
+    </body>
+</html>
