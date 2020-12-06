@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="utf8"/>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/html5reset.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style38.css')}}">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Patrick+Hand&display=swap" rel="stylesheet">    
+        <title>NFL Func5</title>
+    </head>
+    <body>
+        <h1>Schedule</h1>
+        {% if flag == False %}
+            <div class="form">
+                <form action="/handle_func5" method="POST">
+                    <p>Which team's schedule you want to check?
+                        <select name="team">
+                            {% for d in team_list %}
+                                <option value="{{d}}">{{d}}</option>
+                            {% endfor %}            
+                        </select> 
+
+                    </p>
+                    <input type="submit" value="Submit" class="submit">
+                </form>
+            </div>
+        <div class="back"><a href="/"  class="button">GO BACK</a></div>
+        {% else %}
+        <h1>Results: </h1>
+            <table class="schedule">
+                <tr>
+                    {% for header in headers %}
+                        <th>{{header}}</th>
+                    {% endfor %}
+                </tr>
+                {% for row in data %}
+                <tr>
+                    {% for cell in row %}
+                        <td>{{cell}}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+            <div class="back"><a href="/func5"  class="button">GO BACK</a></div>
+        {% endif %}
+    </body>
+</html>

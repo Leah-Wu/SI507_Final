@@ -1,0 +1,101 @@
+body{
+    font-family: 'Caveat', cursive;
+    font-family: 'Patrick Hand', cursive;
+    color: #253F63;
+    margin: 0;
+    padding: 3% 6%;
+    word-spacing: 0.2em;
+    font-size: 1em; 
+    text-align: center;
+    
+    background-image: url('../bg.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+h1, h2{
+    font-size: 2em; 
+    line-height: 2;
+}    
+p{
+    padding: 20px, 0;
+}
+#choices{
+    padding: 100px, 0;
+    font-size: 1.5em;
+}
+#choices a{
+    color: #253F63;
+}
+a, a:visited{
+    text-decoration: none; 
+}
+
+
+.form{
+    padding:0 50px 10px 50px;
+    margin-top: 4px;    
+}
+input[type=submit], .button {
+    background-color: #253F63;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+input[type=submit]:hover, .button:hover {
+    background-color: #142844;
+}
+.back{
+    padding: 20px 0;
+}
+
+
+table{
+    margin:10px auto;
+    color:#142844;
+}
+tr{
+    background-color: white;
+}
+td{ 
+    text-align:left; 
+}
+td.opt1 { 
+    text-align:center; 
+    vertical-align:middle; 
+}
+
+
+.schedule{
+    border-collapse: collapse;
+    width: 70%;
+}
+#choices{
+    width: 40%;
+}
+.schedule td, .schedule th{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+.schedule th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #233e63;
+    color: white;
+}
+.schedule tr{
+    background-color: white;
+}
+#choices tr:nth-child(even){
+    background-color: white;
+}
+.schedule tr:nth-child(even){
+    background-color: #bdb7b7;
+}
+
+.schedule tr:hover, #choices tr:hover {
+    background-color: rgb(142, 183, 236);
+}
