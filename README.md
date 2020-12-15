@@ -11,7 +11,8 @@ Run app.py directly, then wait for initializing app and visit page link shown in
 Test guide:
 Before start, you can check this video as guidance: https://drive.google.com/file/d/1b-IQ0CuyQgToxzOx9YyEHzXv18Azqlyr/view?usp=sharing
 User face capabilities: 5 features to choose:
-	1. A team’s/overall top 3 Rosters’ rushing performance comparison: TD, ATT
+
+    1. A team’s/overall top 3 Rosters’ rushing performance comparison: TD, ATT
     input: choose a team avalilable for this feature
     output: a Bar chart with top 3 rosters': x: Name,  y: TD, title: team
 
