@@ -5,7 +5,6 @@ Startup:
 install packages:
 flask, sqlite3, plotly, bs4, BeautifulSoup, requests
 
-
 Run app:
 Run app.py directly, then wait for initializing app and visit page link shown in terminal
 
